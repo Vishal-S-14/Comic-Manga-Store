@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Comics & Manga World | UID Lab Portal</title>
+  
+  <!-- Meta & Favicon -->
+  <meta name="description" content="Online Comics, Manga, and Graphic Novels digital reading platform developed for User Interface Design Lab (20CYS202).">
+  <link rel="icon" type="image/x-icon" href="Images/Comic Manga.ico">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="CSS/modern.css">
+</head>
+<body>
+
+  <!-- Academic Ribbon Banner -->
+  <aside class="lab-ribbon">
+    <div style="display: flex; align-items: center; gap: 8px;">
+      <span class="badge">UID Lab Project</span>
+      <span>Course: <strong>20CYS202 - User Interface Design</strong></span>
+      <span>•</span>
+      <span>Batch: <strong>22CYS</strong></span>
+    </div>
+    <div class="authors">
+      <span>Developer: <strong>Vishal S</strong> (CB.EN.U4CYS22075)</span>
+      <span>•</span>
+      <span>Amrita Vishwa Vidyapeetham</span>
+    </div>
+  </aside>
+
+  <!-- Application Header -->
+  <header class="app-header">
+    <div class="nav-container">
+      <a href="index.html" class="brand-link">
+        <img src="Images/Comic Manga.ico" alt="Comics Logo">
+        <div>
+          <span>Comics<span class="accent">X</span>Manga</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav>
+        <ul class="nav-links" id="desktopNav">
+          <li>
+            <a href="index.html" class="nav-link active" data-view="catalog">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              <span>Catalog</span>
+            </a>
+          </li>
+          <li>
+            <a href="#news" class="nav-link" data-view="news">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1m2 13a2 2 0 0 1-2-2V7m2 13a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"></path><path d="M7 8h6m-6 4h6m-6 4h4"></path></svg>
+              <span>News &amp; Top 5</span>
+            </a>
+          </li>
+          <li>
+            <a href="#favorites" class="nav-link" data-view="favorites">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+              <span>My Library</span>
+            </a>
+          </li>
+          <li>
+            <a href="#history" class="nav-link" data-view="history">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+              <span>History</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Right Header Controls -->
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="themeToggleBtn" aria-label="Toggle dark/light mode" title="Toggle Theme">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+        </button>
+
+        <div id="userProfileArea">
+          <!-- Populated dynamically by app.js -->
+        </div>
+
+        <button class="mobile-toggle-btn" id="mobileToggleBtn" aria-label="Open mobile navigation">
+          ☰
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div class="nav-links" id="mobileNav" style="display: none;">
+      <a href="index.html" class="nav-link" data-view="catalog">Catalog</a>
+      <a href="#news" class="nav-link" data-view="news">News &amp; Top 5</a>
+      <a href="#favorites" class="nav-link" data-view="favorites">My Library</a>
+      <a href="#history" class="nav-link" data-view="history">History</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-container">
+      <div class="hero-text-col">
+        <div class="hero-tag">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          <span>Interactive Digital Reading Hub • 40+ Titles</span>
+        </div>
+        <h1 class="hero-title" id="heroTitle">
+          Explore Endless <span class="gradient-text">Comics, Manga &amp; Graphic Novels</span>
+        </h1>
+        <p class="hero-desc" id="heroDesc">
+          Immerse yourself in top-rated Japanese manga, legendary Marvel &amp; DC superhero sagas, and world-renowned graphic novels with instant high-definition PDF readers.
+        </p>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h3>41+</h3>
+            <p>Curated Titles</p>
+          </div>
+          <div class="stat-item">
+            <h3>37</h3>
+            <p>Full Reader PDFs</p>
+          </div>
+          <div class="stat-item">
+            <h3>100%</h3>
+            <p>Free &amp; Client-Side</p>
+          </div>
+        </div>
+
+        <div class="hero-actions">
+          <button class="btn btn-primary" id="heroReadBtn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>
+            <span>Start Reading Now</span>
+          </button>
+          <button class="btn btn-secondary" id="heroDetailsBtn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="11" x2="12" y2="17"></line><circle cx="12" cy="7.5" r="1.15" fill="currentColor" stroke="none"></circle></svg>
+            <span>View Title Details</span>
+          </button>
+        </div>
+      </div>
+
+      <div class="hero-showcase">
+        <div class="showcase-card">
+          <img id="heroCover" src="Images/1piece.jpg" alt="Featured Title">
+          <div class="showcase-overlay">
+            <span class="card-badge manga" style="position: static; width: fit-content; margin-bottom: 6px;">FEATURED PICK</span>
+            <h4>Trending This Week</h4>
+            <p>Click "Start Reading" above to jump right into the reader!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Viewports -->
+  <main class="main-content">
+
+    <!-- Catalog Section -->
+    <section id="catalogSection">
+      <!-- Toolbar: Filters, Search, Sort -->
+      <div class="toolbar-section">
+        <div class="toolbar-top">
+          <!-- Type Filter Pills -->
+          <div class="type-pills">
+            <button class="type-pill active" data-type="all">All Titles</button>
+            <button class="type-pill" data-type="manga">Manga</button>
+            <button class="type-pill" data-type="comic">Comics</button>
+            <button class="type-pill" data-type="novel">Graphic Novels</button>
+          </div>
+
+          <!-- Live Search Bar -->
+          <div class="search-container">
+            <span class="search-icon">
+              <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </span>
+            <input type="text" class="search-input" id="searchInput" placeholder="Search by title, author, or genre..." autocomplete="off">
+            <button class="search-clear-btn" id="searchClearBtn" aria-label="Clear search">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="toolbar-bottom">
+          <div class="filter-dropdowns">
+            <!-- Genre Filter -->
+            <label for="genreSelect" style="font-size: 0.85rem; color: var(--text-dim); font-weight: 600;">GENRE:</label>
+            <select class="filter-select" id="genreSelect">
+              <option value="all">All Genres</option>
+              <option value="Action">Action</option>
+              <option value="Adventure">Adventure</option>
+              <option value="Fantasy">Fantasy</option>
+              <option value="Superhero">Superhero</option>
+              <option value="Sci-Fi">Sci-Fi</option>
+              <option value="Mystery">Mystery</option>
+              <option value="Thriller">Thriller</option>
+              <option value="Sports">Sports</option>
+              <option value="Fiction">Fiction</option>
+            </select>
+
+            <!-- Sort By -->
+            <label for="sortSelect" style="font-size: 0.85rem; color: var(--text-dim); font-weight: 600; margin-left: 8px;">SORT:</label>
+            <select class="filter-select" id="sortSelect">
+              <option value="featured">Featured First</option>
+              <option value="rating">Highest Rated</option>
+              <option value="views">Most Popular</option>
+              <option value="newest">Release Year</option>
+              <option value="title-asc">Title (A - Z)</option>
+              <option value="title-desc">Title (Z - A)</option>
+            </select>
+          </div>
+
+          <div class="results-meta">
+            <span id="resultsCount">Showing 41 titles</span>
+            <button class="reset-filters-btn" id="resetFiltersBtn">Reset Filters</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Book Grid Container -->
+      <div class="catalog-grid" id="catalogGrid">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </section>
+
+    <!-- News & Top 5 Section -->
+    <section id="newsSection" style="display: none;">
+      <div style="margin-bottom: 24px;">
+        <h2 style="font-size: 2rem; font-weight: 800;">Latest News &amp; Weekly Rankings</h2>
+        <p style="color: var(--text-muted);">Curated editorial breakdown of this week's top manga, western comic clashes, and literary graphic novels.</p>
+      </div>
+
+      <div class="news-section" id="newsContainer">
+        <!-- Rendered dynamically by app.js -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- In-App Comic PDF Reader Modal -->
+  <div class="modal-overlay reader-modal" id="readerModal">
+    <div class="modal-container">
+      <div class="reader-header">
+        <h3 id="readerTitle" style="font-size: 1.05rem; font-weight: 700;">Reading Mode</h3>
+        <div class="reader-actions">
+          <button class="btn btn-secondary" id="readerFullscreenBtn" style="padding: 6px 12px; font-size: 0.82rem;" title="Fullscreen">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"></path></svg>
+            <span>Fullscreen</span>
+          </button>
+          <a id="readerNewTabBtn" href="#" target="_blank" class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.82rem;" title="Open in new window">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+            <span>External Tab</span>
+          </a>
+          <a id="readerDownloadBtn" href="#" download class="btn btn-secondary" style="padding: 6px 12px; font-size: 0.82rem;" title="Download PDF">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+            <span>Download</span>
+          </a>
+          <button class="modal-close-btn" aria-label="Close reader">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+      </div>
+      <div class="reader-frame-container">
+        <iframe id="readerFrame" src="" title="Comic Book PDF Reader"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Details & Reviews Modal -->
+  <div class="modal-overlay detail-modal" id="detailModal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title">Book Overview</h3>
+        <button class="modal-close-btn" aria-label="Close details">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="modal-body" id="detailBody">
+        <!-- Injected dynamically by app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Authentication Modal (Sign In / Register) -->
+  <div class="modal-overlay" id="authModal">
+    <div class="modal-container" style="max-width: 440px;">
+      <div class="modal-header">
+        <h3 class="modal-title">Member Portal</h3>
+        <button class="modal-close-btn" aria-label="Close authentication">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="auth-tabs">
+          <button class="auth-tab active" id="authTabLogin">Sign In</button>
+          <button class="auth-tab" id="authTabSignup">Create Account</button>
+        </div>
+
+        <!-- Sign In Form -->
+        <form class="auth-form" id="loginForm">
+          <div class="form-group">
+            <label for="loginIdentifier">Username or Email</label>
+            <input type="text" id="loginIdentifier" placeholder="Enter your username or email" required>
+          </div>
+          <div class="form-group">
+            <label for="loginPassword">Password</label>
+            <input type="password" id="loginPassword" placeholder="Enter your password" required>
+          </div>
+          <button type="submit" class="btn btn-primary" style="margin-top: 8px;">
+            Sign In
+          </button>
+
+          <div class="demo-login-box">
+            <div>
+              <strong>Quick Reviewer Access</strong>
+              <p>Instant 1-click login for UID lab evaluation</p>
+            </div>
+            <button type="button" class="demo-login-btn" id="demoLoginBtn">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" style="vertical-align: -1px; margin-right: 4px;"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+              <span>Demo Login</span>
+            </button>
+          </div>
+        </form>
+
+        <!-- Sign Up Form -->
+        <form class="auth-form" id="signupForm" style="display: none;">
+          <div class="form-group">
+            <label for="signupUsername">Username</label>
+            <input type="text" id="signupUsername" placeholder="Choose a username (min 3 chars)" required>
+          </div>
+          <div class="form-group">
+            <label for="signupEmail">Email Address</label>
+            <input type="email" id="signupEmail" placeholder="yourname@domain.com" required>
+          </div>
+          <div class="form-group">
+            <label for="signupPassword">Password</label>
+            <input type="password" id="signupPassword" placeholder="Create a secure password (min 6 chars)" required>
+          </div>
+          <div style="font-size: 0.8rem; color: var(--text-muted); display: flex; align-items: center; gap: 6px;">
+            <input type="checkbox" id="termsCheck" required checked>
+            <label for="termsCheck">I accept the Terms &amp; Conditions</label>
+          </div>
+          <button type="submit" class="btn btn-primary" style="margin-top: 8px;">
+            Create Free Account
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Application Footer -->
+  <footer class="app-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h3>Comics &amp; Manga World</h3>
+        <p>A comprehensive web portal designed for online comics, manga, and graphic novel reading. Engineered as part of the User Interface Design Laboratory (20CYS202).</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul>
+          <li><a href="index.html" onclick="comicApp.navigateTo('catalog'); return false;">All Titles</a></li>
+          <li><a href="#news" onclick="comicApp.navigateTo('news'); return false;">Weekly Rankings</a></li>
+          <li><a href="#favorites" onclick="comicApp.navigateTo('favorites'); return false;">Saved Library</a></li>
+          <li><a href="#history" onclick="comicApp.navigateTo('history'); return false;">Reading History</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Lab Project Details</h4>
+        <ul>
+          <li><strong>Course:</strong> 20CYS202 - User Interface Design</li>
+          <li><strong>Batch:</strong> 22CYS (Amrita Vishwa Vidyapeetham)</li>
+          <li><strong>Developer:</strong> Vishal S (CB.EN.U4CYS22075)</li>
+          <li><strong>Architecture:</strong> Modern Vanilla SPA + Mock API</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Vishal S (CB.EN.U4CYS22075). Comics X Manga World.</p>
+      <p>Built with Semantic HTML5, CSS3 Custom Properties, and Modern ES6+ JavaScript.</p>
+    </div>
+  </footer>
+
+  <!-- Application Logic Scripts -->
+  <script src="JavaScript/data.js"></script>
+  <script src="JavaScript/api.js"></script>
+  <script src="JavaScript/app.js"></script>
+</body>
+</html>
